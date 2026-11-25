@@ -86,3 +86,24 @@ flowchart TD
     D --> I["📄 HTML Templates + 📁 Static Assets (development/static)"]
     I --> B
     B --> A
+
+
+stateDiagram-v2
+    [*] --> BrowsePlatform : User opens ChargeFuel
+    BrowsePlatform --> SelectService : Chooses Fuel Delivery or EV Charging
+    SelectService --> SubmitRequest : Enters location & vehicle/service details
+    SubmitRequest --> ValidateAndSave : Django view validates & saves to DB
+    ValidateAndSave --> Assigned : Service unit assigned / status updated
+    Assigned --> Completed : Refueling / charging fulfilled
+    Completed --> [*]
+
+
+ChargeFuel/
+├── development/
+│   └── static/              # Static assets, images, GIFs, and styling files
+├── manage.py                # Django CLI entry point
+├── requirements.txt         # Python package dependencies
+├── .gitignore               # Ignored files and directories (e.g., venv/)
+└── README.md                # Project documentation
+
+Author: Aditya Pratap Singh Sisodiya (Adiii-12)
