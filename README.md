@@ -86,5 +86,3 @@ flowchart TD
     D --> I["📄 HTML Templates + 📁 Static Assets (development/static)"]
     I --> B
     B --> A
-
-Author: Aditya Pratap Singh Sisodiya (Adiii-12)
