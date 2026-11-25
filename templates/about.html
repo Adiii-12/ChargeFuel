@@ -1,0 +1,217 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+<style>
+    body
+    {
+        background-image: url('{% static 'images/about1.png'%}');
+        background-size:100%;
+    }
+
+    .tabtheme
+    {
+        text-align: center;
+        font-family: Arial;
+        color: white;
+        margin-top: 20px;
+        margin-right: 180px;
+        font-size: 25px;
+
+        position: relative;
+        animation: bankease 1s;
+
+    }
+
+    @keyframes bankease
+        {
+            from{top:-100px;}
+            to{top:0px;}
+        }
+
+
+    a
+    {
+        color: white;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: #0c7290;
+        text-decoration: underline;
+    }
+
+
+    .outerdiv
+    {
+
+        width: 43%;
+        height: 100px;
+        background-color: rgb(255,255,255,0.7);
+        margin-left: 70px;
+        position: relative;
+        top: 120px;
+        border-radius: 25px;
+        border: double;
+        border-color: white;
+        color: white;
+        background-color:rgba(0,0,0,0.2);
+
+        transition: 0.3s;
+
+    }
+
+    .outerdiv:hover
+    {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(255, 255, 255, 0.6);
+    }
+
+
+    .slogan
+    {
+        font-size: 40px;
+        position: relative;
+        top: -25px;
+    }
+
+
+    .box{
+        color: #18312e;
+        border-radius:40px;
+        transition:transform  .5s;
+    }
+    .box:hover
+    {
+        color: #18312e;
+        transform:scale(1.3);
+    }
+
+    .option
+    {
+        color: white;
+        margin-top: 200px;
+        font-size: 25px;
+    }
+
+    .signuptheme
+    {
+        background-color: white;
+        color: #863903;
+	    font-size:20px;
+        width: 150px;
+        height: 35px;
+        border-radius: 40px;
+        margin-left: 1050px;
+        margin-top: 50px;
+        transition:transform  .5s;
+
+
+        clip-path: polygon(
+        8% 0%,
+        92% 0%,
+        100% 50%,
+        92% 100%,
+        8% 100%,
+        0% 50%
+        );
+        {#border-bottom-left-radius: 45px;#}
+        {#border-bottom-right-radius: 45px;#}
+        {#border-top-left-radius: 90px;#}
+        {#border-top-right-radius: 90px;#}
+    }
+
+
+    .signuptheme:hover
+    {
+        transform:scale(1.3);
+	    background-color: #e77703;
+        color:white;
+    }
+
+
+
+    .logintheme
+    {
+        background-color: white;
+        color: #041786;
+	    font-size:20px;
+        width: 150px;
+        height: 35px;
+        border-radius: 40px;
+        transition:transform  .5s;
+
+        clip-path: polygon(
+        8% 0%,
+        92% 0%,
+        100% 50%,
+        92% 100%,
+        8% 100%,
+        0% 50%
+        );
+
+    }
+
+
+    .logintheme:hover
+    {
+        transform:scale(1.3);
+	    background-color: #315e6d;
+        color:white;
+    }
+
+
+
+
+</style>
+
+<body>
+
+<table width="90%" class="tabtheme" align="right">
+
+    <tr>
+
+        <td class="box"><a href="homelink">Home</a></td>
+        <td class="box"><a href="aboutlink">About Us</a></td>
+        <td class="box"><a href="servicelink">Services</a></td>
+        <td class="box"><a href="contactlink">Contact Us</a></td>
+
+    </tr>
+
+</table>
+
+
+
+{##}
+{##}
+{#<div class="outerdiv">#}
+{##}
+{#    <h1 class="slogan">Energise Your Ride, At Your Doorstep</h1>#}
+{##}
+{##}
+{#</div>#}
+{##}
+
+
+{#<div class="option">#}
+{#    <table cellspacing="10px" cellpadding="10px" style="margin-left: 165px;margin-top: -5px">#}
+{#        <tr align="center">#}
+{#            <td class="signuptheme" align="center"><a href="signuplink" style="text-decoration: none;color: #fcbd06">Sign Up</a></td>#}
+{#            <td></td>#}
+{#            <td></td>#}
+{##}
+{##}
+{#            <td class="logintheme" align="center"><a href="loginlink" style="text-decoration: none;color: #04caf5">Log In</a></td>#}
+{#        </tr>#}
+{#    </table>#}
+{#</div>#}
+
+
+
+</body>
+</html>

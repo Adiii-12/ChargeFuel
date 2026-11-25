@@ -1,0 +1,312 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+<style>
+    body
+    {
+        background-image: url('{% static 'images/order3.png'%}');
+        background-size:100%;
+    }
+
+    .tabtheme
+    {
+        text-align: center;
+        font-family: Arial;
+        color: black;
+        margin-top: 20px;
+        margin-right: 180px;
+        font-size: 25px;
+
+        position: relative;
+        animation: bankease 1s;
+
+    }
+
+    @keyframes bankease
+        {
+            from{top:-100px;}
+            to{top:0px;}
+        }
+
+
+    a
+    {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: #254104;
+        text-decoration: underline;
+    }
+
+
+    .outerdiv
+    {
+
+        width: 34%;
+        height: 80px;
+        background-color: rgb(255,255,255,0.7);
+        margin-left: 500px;
+        position: relative;
+        top: 100px;
+        border-radius: 25px;
+        border: double;
+        border-color: white;
+        color: white;
+        background-color:rgba(0,0,0,0.5);
+
+        transition: 0.3s;
+
+    }
+
+    .outerdiv:hover
+    {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+    }
+
+
+    .slogan
+    {
+        font-size: 40px;
+        position: relative;
+        top: -35px;
+        left: 60px;
+    }
+
+
+    .box{
+        color: #18312e;
+        border-radius:40px;
+        transition:transform  .5s;
+    }
+    .box:hover
+    {
+        color: #18312e;
+        transform:scale(1.3);
+    }
+
+    .formtheme
+    {
+        background-color:rgba(255,255,255,0.3);
+        margin-top: 240px;
+        margin-left: 200px;
+        border: solid;
+        width: 400px;
+        height: 285px;
+        border-radius: 15px;
+        transition: 0.3s;
+    }
+
+    .formtheme:hover
+    {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+    }
+
+    .texttheme
+    {
+        width: 200%;
+        height: 25px;
+        border-radius: 5px;
+    }
+
+    .buttontheme
+    {
+        width: 150%;
+        margin-left: 50px;
+        border-radius: 5px;
+        margin-top: 0px;
+        transition: 0.3s;
+        background-color: #e7e8fd;
+    }
+
+    .buttontheme:hover
+    {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+    }
+
+
+    .option
+    {
+        color: white;
+        margin-top: 240px;
+        margin-left: 195px;
+        font-size: 50px;
+    }
+
+    .signuptheme
+    {
+        background-color: white;
+        color: #863903;
+	    font-size:30px;
+        width: 250px;
+        height: 70px;
+        border-radius: 40px;
+        margin-left: 1500px;
+        margin-top: 100px;
+        transition:transform  .5s;
+
+
+        clip-path: polygon(
+        8% 0%,
+        92% 0%,
+        100% 50%,
+        92% 100%,
+        8% 100%,
+        0% 50%
+        );
+        {#border-bottom-left-radius: 45px;#}
+        {#border-bottom-right-radius: 45px;#}
+        {#border-top-left-radius: 90px;#}
+        {#border-top-right-radius: 90px;#}
+    }
+
+
+    .signuptheme:hover
+    {
+        transform:scale(1.3);
+	    background-color: #e77703;
+        color:white;
+    }
+
+
+
+    .logintheme
+    {
+        background-color: white;
+        color: #041786;
+	    font-size:30px;
+        width: 250px;
+        height: 70px;
+        border-radius: 40px;
+        transition:transform  .5s;
+
+        clip-path: polygon(
+        8% 0%,
+        92% 0%,
+        100% 50%,
+        92% 100%,
+        8% 100%,
+        0% 50%
+        );
+
+    }
+
+
+    .logintheme:hover
+    {
+        transform:scale(1.3);
+	    background-color: #315e6d;
+        color:white;
+    }
+
+
+
+
+</style>
+
+<body>
+
+<table width="90%" class="tabtheme" align="right">
+
+    <tr>
+
+        <td class="box"><a href="custdashboardlink">Dashboard</a></td>
+        <td class="box"><a href="orderlink">Order</a></td>
+        <td class="box"><a href="settinglink">Settings</a></td>
+        <td class="box"><a href="complainlink">Complain</a></td>
+        <td class="box"><a href="feedbacklink">Feedback</a></td>
+        <td class="box"><a href="deletelink">Account</a></td>
+
+
+    </tr>
+
+</table>
+
+
+<div class="outerdiv">
+
+    <h1 class="slogan">One Tap, Endless Miles</h1>
+
+
+</div>
+
+{#                                 Order TABLE#}
+
+
+
+{#<div class="formtheme">#}
+{##}
+{#    <form action="feed" method="post">#}
+{##}
+{#    {% csrf_token %}#}
+{##}
+{##}
+{#<table width="200px" cellspacing="15px" style="color: white">#}
+{##}
+{##}
+{#    <tr>#}
+{#        <td>ID</td>#}
+{#    </tr>#}
+{#    #}
+{#    #}
+{#    <tr>#}
+{#        <td><input type="text" name="uid" placeholder="Enter ID here" required="true" class="texttheme"></td>#}
+{#    </tr>#}
+{##}
+{#    <tr>#}
+{#        <td>Feedback</td>#}
+{#    </tr>#}
+{##}
+{#    <tr>#}
+{#        <td><textarea name="feedback" placeholder="Enter Feedback here" required="true" class="texttheme" style="height: 40px"></textarea></td>#}
+{#    </tr>#}
+{#    #}
+{##}
+{##}
+{#    <tr>#}
+{#        <td><input type="submit" value="Send" class="buttontheme"></td>#}
+{#    </tr>#}
+{##}
+{##}
+{##}
+{##}
+{#    </table>#}
+{##}
+{##}
+{#        </form>#}
+{##}
+{#</div>#}
+
+<div class="option">
+    <table cellspacing="10px" cellpadding="10px" style="margin-left: 155px;margin-top: -5px">
+        <tr align="center">
+            <td class="signuptheme" align="center"><a href="orderfuellink" style="text-decoration: none;color: #fcbd06">Order Fuel</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+<td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+
+            <td class="logintheme" align="center"><a href="orderevlink" style="text-decoration: none;color: #04caf5">Order Ev</a></td>
+        </tr>
+    </table>
+</div>
+
+
+
+</body>
+</html>
